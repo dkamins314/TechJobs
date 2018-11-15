@@ -66,9 +66,9 @@ namespace TechJobsConsole
 
             foreach (Dictionary<string, string> job in AllJobs)
             {
-                foreach (string key in job.Keys)
+                foreach (KeyValuePair <string,string> item in job)
                 {
-                    if ((job[key]).ToUpper().Contains(searchTerm.ToUpper()))
+                    if (item.Value.ToUpper().Contains(searchTerm.ToUpper()))
                     {
                         jobs.Add(job);
 
